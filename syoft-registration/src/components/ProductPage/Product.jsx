@@ -21,7 +21,7 @@ export const Product = () => {
   useEffect(() => {
     async function AllshoppingData() {
       await axios
-        .get('http://localhost:8080/product', {
+        .get('https://syoftapiproject.herokuapp.com/product', {
           params: {
             category: filterTitle,
             _page: page,

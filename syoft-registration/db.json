@@ -1,0 +1,37 @@
+{
+  "product": [
+    {
+      "Title": "shirts",
+      "Price": 227,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 1
+    },
+    {
+      "Title": "sando",
+      "Price": 2273,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 2
+    },
+    {
+      "Title": "Underwear",
+      "Price": 223,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 3
+    }
+  ],
+  "register": [
+    {
+      "FIRSTNAME": "ROHIT",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit1995chourey@gmail.com",
+      "PASSWORD": "2353455",
+      "MOBILE": "09074052483",
+      "ROLE": "Manager",
+      "id": 1
+    }
+  ],
+  "login": []
+}
