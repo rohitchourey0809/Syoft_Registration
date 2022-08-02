@@ -19,7 +19,7 @@ app.use("/users", Usercontroller);
 app.post("/register", register);
 app.post("/login", login);
 app.use("/product", Productcontroller);
-app.post("/product", Productcontroller);
+// app.post("/product", Productcontroller);
 
 app.listen(port, async () => {
   try {
