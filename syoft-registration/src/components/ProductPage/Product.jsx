@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Grid,
-  Input,
-  Stack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Center, Grid, Stack } from '@chakra-ui/react';
 import { ProductItem } from './ProductItem';
 import axios from 'axios';
 
