@@ -1,0 +1,15 @@
+{
+  "product": [],
+  "register": [
+    {
+      "FIRSTNAME": "ROHIT",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit1995chourey@gmail.com",
+      "PASSWORD": "2353455",
+      "MOBILE": "09074052483",
+      "ROLE": "Manager",
+      "id": 1
+    }
+  ],
+  "login": []
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { ChakraProvider, Box, VStack, theme, Stack } from '@chakra-ui/react';
+import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import { Route, Routes } from 'react-router-dom';
 import { Registration } from './components/RegistrationPage/Registration';
 import { Login } from './components/LoginPage/Login';
 import { Landing } from './components/LandingPage/Landing';
-import { Product } from './components/ProductPage/product';
+import { Product } from './components/ProductPage/Product';
 
 function App() {
   return (
