@@ -1,5 +1,27 @@
 {
-  "product": [],
+  "product": [
+    {
+      "Title": "shirts",
+      "Price": 227,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 1
+    },
+    {
+      "Title": "sando",
+      "Price": 2273,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 2
+    },
+    {
+      "Title": "Underwear",
+      "Price": 223,
+      "Description": "good",
+      "Inventry": 3,
+      "id": 3
+    }
+  ],
   "register": [
     {
       "FIRSTNAME": "ROHIT",
@@ -11,6 +33,5 @@
       "id": 1
     }
   ],
-  "login": :[],
-  "users":[]
+  "login": []
 }
