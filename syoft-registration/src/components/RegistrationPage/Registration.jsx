@@ -48,7 +48,7 @@ export const Registration = () => {
         ROLE: role,
       };
       axios
-        .post('https://syoftapiproject.herokuapp.com/register', payload)
+        .post('https://syoftapi.herokuapp.com/register', payload)
         .then(response => {
           console.log(response.data);
           alert(

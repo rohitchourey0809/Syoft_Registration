@@ -27,10 +27,10 @@ export const Login = () => {
         PASSWORD: password,
       };
       axios
-        .post('https://syoftapiproject.herokuapp.com/login', payload)
+        .post('https://syoftapi.herokuapp.com/login', payload)
         .then(response => {
           alert(`login Successful  -${response.status}`);
-          navigate('/');
+          navigate('/product');
         })
         .catch(error => {
           console.log('ErrorSignup', error);

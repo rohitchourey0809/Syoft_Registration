@@ -12,7 +12,7 @@ export const Product = () => {
   useEffect(() => {
     async function AllshoppingData() {
       await axios
-        .get('https://syoftapiproject.herokuapp.com/product', {
+        .get('https://syoftapi.herokuapp.com/product', {
           params: {
             category: filterTitle,
             _page: page,
@@ -21,6 +21,7 @@ export const Product = () => {
           },
         })
         .then(response => {
+          console.log(response.data);
           setshopData(response.data);
           // return response.data;
         })
