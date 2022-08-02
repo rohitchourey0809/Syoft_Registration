@@ -48,7 +48,7 @@ export const ProductItem = props => {
               >
                 {props.Title}
               </Heading>
-              <Text fontSize={'20px'}>{props.description}</Text>
+              <Text fontSize={'20px'}>{props.Description}</Text>
               <Text color={'red.500'} letterSpacing={1}>
                 `${props.Price}`
               </Text>
