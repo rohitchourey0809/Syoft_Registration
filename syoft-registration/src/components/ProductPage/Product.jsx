@@ -47,6 +47,7 @@ export const Product = () => {
                       Inventry={e.Inventry}
                       Description={e.Description}
                       Price={e.Price}
+                      Image={e.Image}
                     />
                   );
                 })}

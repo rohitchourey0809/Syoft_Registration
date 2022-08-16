@@ -4,6 +4,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Image,
   Stack,
   Text,
 } from '@chakra-ui/react';
@@ -22,14 +23,14 @@ export const ProductItem = props => {
             className="elements"
           >
             <Box h={'210px'} bg={'gray.100'}>
-              {/* <Image
-                src={props.imageUrl}
+              <Image
+                src={props.Image}
                 height={'100%'}
                 width={'100%'}
                 margin={'auto'}
                 p={10}
                 bg={'cream'}
-              /> */}
+              />
             </Box>
             <Stack>
               <Text
