@@ -14,7 +14,7 @@ const userschema = new mongoose.Schema(
   }
 );
 
-//===================before saving pasword convert is descrptinn form===>
+//===================before saving pasword convert is descripted form===>
 //bcrypt
 //pre
 
