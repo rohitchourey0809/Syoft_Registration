@@ -6,7 +6,6 @@ const verifyToken = (token) => {
     console.log(process.env.JWT_SECRET_KEY);
     jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
       if (err) return reject(err);
-
       return resolve(decoded);
     });
   });
@@ -24,6 +23,8 @@ const authenticate = async (req, res, next) => {
       .send({ message: "B  Authorization token not found or incorrect" });
 
   const token = req.headers.authorization.trim().split(" ")[1];
+  //we are splitting or extracting token from that autherization
+  console.log("req.headers.authorization.", req.headers.authorization);
 
   let decoded;
   try {
@@ -38,7 +39,8 @@ const authenticate = async (req, res, next) => {
 
   console.log("decodeddata", decoded);
 
-  req.userdata = decoded.userRegister;
+  req.userdata = decoded.userdata;
+  // req.userdata = decoded.userRegister;
 
   return next();
 };

@@ -7,24 +7,35 @@ const authorise = require("../middleware/authorise");
 
 const router = express.Router();
 
-router.post("/", authenticate, async function (req, res) {
-  try {
-    const productdata = await Product.create(req.body);
-    console.log("Productdata", productdata);
-    return res.status(200).send(productdata);
-  } catch (err) {
-    return res.status(400).send({ message: err.message });
+router.post(
+  "/",
+  authenticate,
+  authorise(["Admin", "Manager"]),
+  async function (req, res) {
+    try {
+      const productdata = await Product.create(req.body);
+      console.log("Productdata", productdata);
+      return res.status(200).send(productdata);
+    } catch (err) {
+      return res.status(400).send({ message: err.message });
+    }
   }
-});
+);
 
-router.get("/", authenticate, async function (req, res) {
-  try {
-    const productdata = await Product.find();
-    return res.status(200).send(productdata);
-  } catch (err) {
-    return res.status(400).send({ message: err.message });
+router.get(
+  "/",
+  authenticate,
+  authorise(["Admin", "Manager"]),
+  async function (req, res) {
+    try {
+      const productdata = await Product.find();
+      console.log("getproductdata0", getproductdata);
+      return res.status(200).send(productdata);
+    } catch (err) {
+      return res.status(400).send({ message: err.message });
+    }
   }
-});
+);
 
 router.patch(
   "/:id",
