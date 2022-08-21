@@ -4,7 +4,7 @@
   "description": "\"Backend Work\"",
   "main": "server.js",
   "scripts": {
-    "start": "serve -s build",
+    "start": "node server.js",
     "heroku-postbuild": "npm run build"
   },
   "author": "Rohit Chourey",
