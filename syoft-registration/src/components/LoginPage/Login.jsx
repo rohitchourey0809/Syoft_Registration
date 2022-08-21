@@ -27,7 +27,7 @@ export const Login = () => {
         PASSWORD: password,
       };
       axios
-        .post('https://syoftapi.herokuapp.com/login', payload)
+        .post('http://localhost:8080/login', payload)
         .then(response => {
           alert(`login Successful  -${response.status}`);
           navigate('/product');

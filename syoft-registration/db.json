@@ -31,7 +31,22 @@
       "MOBILE": "09074052483",
       "ROLE": "Manager",
       "id": 1
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12345677",
+      "MOBILE": "9074052483",
+      "ROLE": "Admin",
+      "id": 2
     }
   ],
-  "login": []
+  "login": [
+    {
+      "EMAIL": "rohitchourey1122@gmail.com",
+      "PASSWORD": "12345678",
+      "id": 1
+    }
+  ]
 }
