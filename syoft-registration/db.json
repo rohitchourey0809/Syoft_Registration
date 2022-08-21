@@ -40,6 +40,33 @@
       "MOBILE": "9074052483",
       "ROLE": "Admin",
       "id": 2
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12345678",
+      "MOBILE": "1234567",
+      "ROLE": "Admin",
+      "id": 3
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "241341313513",
+      "MOBILE": "1341313135135",
+      "ROLE": "Admin",
+      "id": 4
+    },
+    {
+      "FIRSTNAME": "Rohit",
+      "LASTNAME": "CHOUREY",
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12345678",
+      "MOBILE": "12345678",
+      "ROLE": "Admin",
+      "id": 5
     }
   ],
   "login": [
@@ -47,6 +74,21 @@
       "EMAIL": "rohitchourey1122@gmail.com",
       "PASSWORD": "12345678",
       "id": 1
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12345567",
+      "id": 2
+    },
+    {
+      "EMAIL": "rohit1995chourey@gmail.com",
+      "PASSWORD": "r41323526246",
+      "id": 3
+    },
+    {
+      "EMAIL": "rohit_fw15_206@masai.school",
+      "PASSWORD": "12345678",
+      "id": 4
     }
   ]
 }
