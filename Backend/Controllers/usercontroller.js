@@ -3,7 +3,18 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", async function (req, res) {
+router.post("",async (req,res) => { 
+
+  try{
+   
+    const userPost = await User.create(req.body);
+    return res.status(200).send(userPost);
+  }catch(err) { 
+    return res.status(400).send({ message: err.message });
+  }
+})
+
+router.get("", async function (req, res) {
   try {
     const userdata = await User.find();
     console.log(userdata);
