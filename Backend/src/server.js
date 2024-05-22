@@ -1,39 +1,37 @@
+
 require("dotenv").config();
 const express = require("express");
-let bodyParser = require("body-parser");
-
 const connect = require("./Config/db");
-const Userroutes = require("./routes/userroute");
+const Userroutes = require("./routes/userroutes");
 const Productroutes = require("./routes/productroutes");
 // const Registerroutes = require("./routes/registerroute");
 // const Loginroutes = require("./routes/registerroute");
 
+
+// const { register, login } = require("./Controllers/authcontroller");
+
 const app = express();
 const cors = require("cors");
-// const { register, login } = require("./Controllers/authcontroller");
 
 app.use(
   cors({
     credentials: true,
   })
 );
+const PORT = process.env.PORT || 8080;
 
-let port = process.env.PORT || 8080;
 app.use(express.json());
-
-app.use(bodyParser.json());
-
 app.use("/users", Userroutes);
 app.use("/products", Productroutes);
 // app.use("/register", Registerroutes);
 // app.use("/login", Loginroutes);
 
-app.listen(process.env.PORT, async () => {
+app.listen(PORT, async () => {
   try {
     await connect();
-    console.log("connected");
-    console.log(port);
+    console.log("Connected to the database");
+    console.log(`Server is running on port ${PORT}`);
   } catch (err) {
-    console.log(err);
+    console.error("Error connecting to the database:", err);
   }
 });
