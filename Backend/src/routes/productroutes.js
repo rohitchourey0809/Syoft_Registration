@@ -7,23 +7,23 @@ const router = express.Router();
 
 // <------------------------Productapi--------------------------------------->
 router.get(
-  "/products",
-  authenticate,
-  authorise(["Admin", "Manager"]),
+  "/",
+//   authenticate,
+//   authorise(["Admin", "Manager"]),
   ProductallController.getAllProducts
 );
 
 router.post(
-  "/products",
-  authenticate,
-  authorise(["Admin", "Manager"]),
+  "/",
+//   authenticate,
+//   authorise(["Admin", "Manager"]),
   ProductallController.postAllProducts
 );
 
 router.patch(
-  "/products:id",
-  authenticate,
-  authorise(["Admin", "Manager"]),
+  "/:id",
+//   authenticate,
+//   authorise(["Admin", "Manager"]),
   ProductallController.patchAllProducts
 );
 

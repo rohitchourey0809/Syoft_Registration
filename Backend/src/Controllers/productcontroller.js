@@ -1,12 +1,8 @@
-const express = require("express");
 const Product = require("../Models/productmodel");
 
-
-// const Product = require('../models/product.model');
-
-const router = express.Router();
 const getAllProducts = async (req, res) => {
   try {
+    console.log("req",req);
     const productData = await Product.find();
     console.log(productData);
     return res.status(200).send({ productData });
