@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "\"Backend Work\"",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon src/server.js",
     "heroku-postbuild": "npm run build"
   },
   "author": "Rohit Chourey",

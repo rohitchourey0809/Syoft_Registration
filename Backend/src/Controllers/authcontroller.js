@@ -1,6 +1,6 @@
 require("dotenv").config({ path: "/path_to_env_file" });
 const User = require("../Models/usermodels");
-var jwt = require("jsonwebtoken");
+let jwt = require("jsonwebtoken");
 
 const generateToken = (userdata) => {
   console.log("JWT_SECRET_KEY", `${process.env.JWT_SECRET_KEY}`);
@@ -21,7 +21,7 @@ const register = async (req, res) => {
     console.log("jwt token", `${process.env.JWT_SECRET_KEY}`);
     // <===============token=========>
 
-    var token = jwt.sign({ userRegister }, `${process.env.JWT_SECRET_KEY}`);
+    let token = jwt.sign({ userRegister }, `${process.env.JWT_SECRET_KEY}`);
 
     return res.status(400).send({ userRegister, token });
   } catch (err) {
