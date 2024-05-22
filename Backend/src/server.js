@@ -5,8 +5,8 @@ let bodyParser = require("body-parser");
 const connect = require("./Config/db");
 const Userroutes = require("./routes/userroute");
 const Productroutes = require("./routes/productroutes");
-const Registerroutes = require("./routes/registerroute");
-const Loginroutes = require("./routes/registerroute");
+// const Registerroutes = require("./routes/registerroute");
+// const Loginroutes = require("./routes/registerroute");
 
 const app = express();
 const cors = require("cors");
@@ -25,8 +25,8 @@ app.use(bodyParser.json());
 
 app.use("/users", Userroutes);
 app.use("/products", Productroutes);
-app.use("/register", Registerroutes);
-app.use("/login", Loginroutes);
+// app.use("/register", Registerroutes);
+// app.use("/login", Loginroutes);
 
 app.listen(process.env.PORT, async () => {
   try {

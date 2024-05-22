@@ -10,7 +10,7 @@ const productschema = new mongoose.Schema(
     // Manager_id: { type: mongoose.Schema.Types.ObjectId, required: true },
   },
   {
-    timeStamps: true,
+    timestamps: true,
     versionKey: false,
   }
 );

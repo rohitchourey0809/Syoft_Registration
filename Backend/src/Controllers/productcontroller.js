@@ -1,47 +1,62 @@
 const Product = require("../Models/productmodel");
 
-const getAllProducts = async (req, res) => {
+// Create a new product
+exports.createProduct = async (req, res) => {
   try {
-    console.log("req",req);
-    const productData = await Product.find();
-    console.log(productData);
-    return res.status(200).send({ productData });
+    const product = await Product.create(req.body);
+    return res.status(201).send(product);
   } catch (err) {
     return res.status(400).send({ message: err.message });
   }
 };
 
-const postAllProducts = async function (req, res) {
+// Get all products
+exports.getAllProducts = async (req, res) => {
   try {
-    const productdata = await Product.create(req.body);
-    console.log("Productdata", productdata);
-    return res.status(200).send(productdata);
+    const products = await Product.find();
+    return res.status(200).send(products);
   } catch (err) {
     return res.status(400).send({ message: err.message });
   }
 };
 
-
-const patchAllProducts = async (req, res) => {
+// Get a single product by ID
+exports.getProductById = async (req, res) => {
   try {
-    const productdata = await Product.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
-    console.log(req.params.id, "id");
-    console.log("patch1:", productdata);
-    return res.status(200).send(productdata);
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).send({ message: "Product not found" });
+    }
+    return res.status(200).send(product);
   } catch (err) {
     return res.status(400).send({ message: err.message });
   }
 };
 
+// Update a product
+exports.updateProduct = async (req, res) => {
+  try {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (!product) {
+      return res.status(404).send({ message: "Product not found" });
+    }
+    return res.status(200).send(product);
+  } catch (err) {
+    return res.status(400).send({ message: err.message });
+  }
+};
 
-
-
-module.exports = {
-  getAllProducts,
-  postAllProducts,
-  patchAllProducts,
+// Delete a product
+exports.deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findByIdAndDelete(req.params.id);
+    if (!product) {
+      return res.status(404).send({ message: "Product not found" });
+    }
+    return res.status(200).send({ message: "Product deleted successfully" });
+  } catch (err) {
+    return res.status(400).send({ message: err.message });
+  }
 };
